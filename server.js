@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 // INDEX ROUTE
 app.get('/humans', (req, res) => {
+    Humans = humans;
     res.render('index.ejs')
 });
 

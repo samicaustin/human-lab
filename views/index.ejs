@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1> Index Page </h1>
+    
+    <ul>
+       <% for (i=0; i < Humans.length; i++) {%>
+            <li> <%= Humans[i].name %> 
+            </li>
+        <% } %>
+    </ul>
+
 </body>
 </html>

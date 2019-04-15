@@ -13,4 +13,4 @@ humans = [
     }
 ];
 
-module.export = humans;
+module.exports = humans;
