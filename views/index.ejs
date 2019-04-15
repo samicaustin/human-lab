@@ -11,14 +11,21 @@
 
     <ul>
        <% for (i=0; i < Humans.length; i++) {%>
-            <li> <%= Humans[i].name %> 
+            <li> <%= Humans[i].name %> <%= Humans[i].job %>
 
             <form action="/humans/<%= i %>?_method=DELETE" method="POST">
                 <button type="submit"> Delete </button>
             </form>
+            <form action="/humans/<%= i %>/edit" method="GET">
+                <button type="submit"> Edit</button>
+            </form>
             </li>
         <% } %>
     </ul>
+
+    <form action="/humans/new" method="GET">
+        <button type="submit"> Create New </button>
+    </form>
 
 </body>
 </html>

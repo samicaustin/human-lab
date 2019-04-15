@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Edit Page </h1>
+        <form action = "/humans/<%= id%>?_method=PUT" method = "POST"> 
+            Name: <input type="text" name="name" value="<%=Humans.name%>"/><br>
+            Job: <input type="text" name="job" value="<%=Humans.job%>"/><br>
+                <button type="submit">Edit</button>
+        </form>
+</body>
+</html>

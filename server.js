@@ -25,6 +25,30 @@ app.delete('/humans/:id', (req, res) => {
     console.log("delete route hit")
 });
 
+// UPDATE ROUTE
+app.put('/humans/:id', (req, res) => {
+    Humans[req.params.id] = req.body;
+    res.redirect('/humans');
+})
+
+// EDIT ROUTE
+app.get('/humans/:id/edit', (req, res) => {
+    res.render('edit.ejs', {
+        Humans: humans[req.params.id],
+        id: req.params.id
+    })
+});
+
+// NEW ROUTE
+app.get('/humans/new', (req, res) => {
+    res.render('new.ejs');
+})
+
+// CREATE ROUTE
+app.post('/humans', (req, res) => {
+    humans.push(req.body);
+    res.redirect('/humans');
+});
 
 app.listen(3000, function(){
     console.log("Port is running!")
